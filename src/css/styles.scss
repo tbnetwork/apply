@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'helvetica neue', arial, sans-serif;
+  line-height: 1.5;
+}
+.clearfix {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+a {
+  color: #278BD2;
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+.page {
+	max-width: 40em;
+	margin: 0 auto;
+	padding: 0.25em;
+}
+header {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid lightgrey;
+}
+.logo {
+  float: right;
+  max-width: 110px;
+}
+h1 {
+	line-height: 1.1;
+}
+
+.field {
+  margin: 0 0 0.75em 0;
+}
+
+/*span*/.label {
+	display: block;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+/*span*/.label em {
+	color :red;
+	margin-left: 0.3em;
+}
+
+/*span*/.hint {
+  display: block;
+  font-size: 0.8em;
+  color: grey;
+}
+
+input, textarea {
+	border: 1px solid #B3B3B3;
+	padding: 0.4em 0.6em;
+	font-size: 1em;
+	width: 100%;
+  margin: 0.25em 0 0 0;
+  -webkit-appearance: none;
+}
+@media (min-width: 800px) {
+  input, textarea { font-size: 0.875em; }
+}
+textarea {
+  min-height: 6em;
+  resize: vertical;
+}
+
+input[type=file],
+input.file {
+	border: none;
+	padding: 0;
+}
+input:disabled,
+input[disabled=disabled] {
+  cursor: default;
+}
+
+.button {
+	background: #F4F6F7;
+	border: 1px solid #E2E2E2;
+	border-radius: 3px;
+	padding: 0.6em 1.2em;
+	font-size: 0.9em;
+	font-weight: bold;
+	cursor: pointer;
+	width: auto;
+}
+.button--small {
+	font-size: 0.8em;
+	padding: 0.4em 0.8em;
+}
+.button--large {
+  font-size: 1.2em;
+  padding: 0.7em 1.4em;
+}
+.buttons {
+	margin: 1em 0;
+}
+
+.field--hidden,
+.hidden { display: none; }
+
+.embed-description {
+	font-size: 0.8em;
+	color: grey;
+}
+
+
+.add-file-field {
+  -webkit-appearance: none;
+  font-size: 0.8em;
+  line-height: 1.5;
+  border: none;
+  background: #F4F6F7;
+  margin: 0.5em 0;
+}
+.add-file-field:before {
+  content: "+";
+  font-weight: bold;
+  font-size: 1.2em;
+  line-height: 1;
+  margin-right: 0.3em;
+}
+
+footer {
+  margin: 5em 0 0 0;
+  padding: 1em 0;
+  border-top: 1px solid lightgrey;
+  font-size: 0.8em;
+  color: grey;
+}
+
+/*ul*/.parsley-error-list {
+  margin: 0;
+  padding: 0.25em 1em 0.25em 2em;
+  color: red;
+  font-size: 0.8em;
+}
+input.parsley-error {
+  background: #F2DEDE;
+  border: 1px solid red;
+}
+
+
+@import "pikaday";
+
+
+.ui-autocomplete {
+  padding: 0;
+  list-style: none;
+  background-color: #fff;
+  width: 218px;
+  border: 1px solid #B0BECA;
+  max-height: 350px;
+  overflow-y: scroll;
+}
+.ui-autocomplete .ui-menu-item a {
+  border-top: 1px solid #B0BECA;
+  display: block;
+  padding: 4px 6px;
+  color: #353D44;
+  cursor: pointer;
+}
+.ui-autocomplete .ui-menu-item:first-child a {
+  border-top: none;
+}
+.ui-autocomplete .ui-menu-item a.ui-state-hover {
+  background-color: #D5E5F4;
+  color: #161A1C;
+}
+
+/*# sourceMappingURL=main.css.map */
