@@ -5,17 +5,17 @@
 	 */
 	var $dob = $('.dob').pikaday({
 		firstDay: 1,
-		defaultDate: new Date('1988-01-01'), 
-		minDate: new Date('1940-01-01'), 
-		maxDate: new Date('2999-12-31'), 
+		defaultDate: new Date('1988-01-01'),
+		minDate: new Date('1940-01-01'),
+		maxDate: new Date('2999-12-31'),
 		yearRange: [2000,2020],
 		format: 'DD/MM/YYYY'
 	});
 
 	var $availability = $('.availability').pikaday({
 		firstDay: 1,
-		minDate: new Date(), 
-		maxDate: new Date('2014-12-31'), 
+		minDate: new Date(),
+		maxDate: new Date('2014-12-31'),
 		yearRange: [2000,2020],
 		format: 'DD/MM/YYYY'
 	});
@@ -25,22 +25,22 @@
 	 */
 	$('.add-file-field').click(function(){
 		// Find parent field wrapper
-		var parent = $(this).parent('.field'); 
+		var parent = $(this).parent('.field');
 		// Get first hidden file input
-		var nextHidden = parent.find('.file.hidden').first(); 
+		var nextHidden = parent.find('.file.hidden').first();
 		// Show it
-		nextHidden.removeClass('hidden'); 
+		nextHidden.removeClass('hidden');
 		// Remove add button if there are no hidden items left
-		var filesLeftToAdd = parent.find('.file.hidden'); 
+		var filesLeftToAdd = parent.find('.file.hidden');
 		if( filesLeftToAdd.length == 0 ) { $(this).addClass('hidden'); }
-	}); 
+	});
 
 	/**
 	 * Disable submit button after submit
 	 */
 	$('form').submit(function(){
 		//$("input[type=sumit]", this).prop('disabled', true);
-		//return false; 
+		//return false;
 	});
 
 	/**
@@ -55,8 +55,8 @@
    * Autocomplete university field (UK unis only)
    */
   $('.university').autocomplete({
-  	source: universities, 
+  	source: universities,
   	delay: 0
-  }); 
+  });
 
 });

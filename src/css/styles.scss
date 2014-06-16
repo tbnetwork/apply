@@ -52,6 +52,14 @@ h1 {
     margin: 0 0 0.75em;
 }
 
+label {
+    cursor: pointer;
+}
+
+/* .field */.field--sub {
+    margin-top: -0.5em;
+}
+
 /*span*/.label {
     display: block;
     font-size: 0.9em;
@@ -63,13 +71,24 @@ h1 {
     }
 }
 
+.label--sub {
+    font-size: 0.8em;
+    color: mix(black, white, 60%);
+}
+
 /*span*/.hint {
     display: block;
     font-size: 0.8em;
     color: grey;
 }
 
-input,
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number],
+input[type=date],
+input.country-selector,
+input[role=textarea],
 textarea {
     border: 1px solid #B3B3B3;
     padding: 0.4em 0.6em;
@@ -77,10 +96,12 @@ textarea {
     width: 100%;
     margin: 0.25em 0 0;
     -webkit-appearance: none;
+
     @media (min-width: 800px) {
         font-size: 0.875em;
     }
 }
+
 
 textarea {
     min-height: 6em;
@@ -165,7 +186,8 @@ footer {
     font-size: 0.8em;
 }
 
-input.parsley-error {
+input.parsley-error,
+textarea.parsley-error {
     background: #F2DEDE;
     border: 1px solid red;
 }
@@ -196,6 +218,25 @@ input.parsley-error {
 
     .ui-menu-item:first-child a {
         border-top: none;
+    }
+}
+
+/* ul */.question-wrapper {
+    list-style: none;
+    padding-left: 0;
+    margin: 0.5em 0 1em;
+}
+
+/* label */.radio-label {
+    padding: 0.25em;
+    background: mix(black, white, 5%);
+    min-width: 20%;
+    margin-bottom: 0.25em;
+    display: inline-block;
+
+    &:hover,
+    &:focus {
+        background: mix(darkblue, white, 10%);
     }
 }
 

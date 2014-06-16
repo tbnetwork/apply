@@ -25,6 +25,7 @@ gulp.task('livereload', function() {
             'build/**',
             'index.html'
         ]).on('change', function(file) {
+            console.log( file );
             server.changed(file.path);
         });
 });
@@ -70,11 +71,12 @@ gulp.task('js', function() {
             js_src + '/scripts.js'
         ])
         .pipe(uglify('main.js', {
-            outSourceMap: true,
+            outSourceMap: 'main.js.map',
+            basePath: '',
             compress: {
-                drop_console: true,
-                drop_debugger: true,
-                dead_code: true
+                drop_console: false,
+                drop_debugger: false,
+                dead_code: false
             }
         }))
         .pipe(gulp.dest(js_build))
