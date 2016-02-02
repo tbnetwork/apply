@@ -9,7 +9,7 @@
 		minDate: new Date('1940-01-01'),
 		maxDate: new Date('2999-12-31'),
 		yearRange: [2000,2020],
-		format: 'DD/MM/YYYY'
+		format: 'YYYY-MM-DD'
 	});
 
 	var $availability = $('.availability').pikaday({
@@ -17,7 +17,7 @@
 		minDate: new Date(),
 		maxDate: new Date('2014-12-31'),
 		yearRange: [2000,2020],
-		format: 'DD/MM/YYYY'
+		format: 'YYYY-MM-DD'
 	});
 
 	/**

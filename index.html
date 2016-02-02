@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>TBN Internship Application</title>
+	<title>TBN Job Application</title>
 	<link rel="stylesheet" href="build/css/styles.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token" content="Mhht+SVc7qJk4zJ4uZDA68EQXEu/H3b7s4rTOaWaLFU2fcZyoy581p5GtYXVUkUn1tRuxkTHdAVKhQza+4TY/g==" />
 </head>
 <body>
 
@@ -17,7 +20,7 @@
 <form accept-charset="UTF-8" action="https://podio.com/webforms/5895023/460182" enctype="multipart/form-data" id="webform-form" method="post" data-validate="parsley">
 
 <input name="utf8" type="hidden" value="✓">
-<input name="authenticity_token" type="hidden" value="MCHTDCcqUCiKwDAGlVeyEK915kHe3cqJn5//mx/0IrQ=">
+<input type="hidden" name="authenticity_token" value="7ZD5hgPA25a4GlfQ4+sHclwb7LwSx3yeyCEP1Z7270jp9VINhbJJ4kK/0C2PKYK+S9/eMekffmAxLtA2wOgb4w==" />
 
 <h1>TBN application form</h1>
 
@@ -28,15 +31,16 @@
 <div class="field" data-description="Which job are you applying for?">
   <span class="label"><label for="field_45858046">Vacancy</label><em>*</em></span>
   <span class="hint">Carefully select the vacancy you are applying for</span>
-  <select class="app required" id="field_45858046" name="field_45858046" style="width:100%;" data-notrequired="required">
-    <option value="232417069" selected>Kenya International development &amp;  business internship (2015)</option>
+  <select class="app required" id="field_45858046" name="fields[vacancy]" style="width:100%;" data-notrequired="required">
+    <option value="373127102" selected>Executive Assistant/PA to dynamic successful British Entrepreneur (2016)</option>
+    <!-- <option value="232417069" selected>Kenya International development &amp;  business internship (2015)</option> -->
     <!-- <option value="165774682" selected>International development &amp;  business internship (Summer 2014)</option> -->
   </select>
 </div>
 
 <div class="field" data-description="">
   <span class="label"><label for="field_47343254">Where did you hear about this role?</label></span>
-  <select class="state" id="field_47343254" name="field_47343254">
+  <select class="state" id="field_47343254" name="fields[where-did-you-hear-about-this-role]">
     <option value="">-- please choose --</option>
     <option value="1">TBN website</option>
     <option value="2">TargetJobs website</option>
@@ -53,7 +57,7 @@
 
 <div class="field field--hidden" data-description="">
   <span class="label"><label for="field_45858047">Candidate type</label><em>*</em></span>
-  <select class="state required" id="field_45858047" name="field_45858047">
+  <select class="state required" id="field_45858047" name="fields[candidate-type]">
     <option value="1" selected>Applicant</option>
 		<option value="3">Referred Applicant</option>
 		<option value="2">Talent we spotted</option>
@@ -62,7 +66,7 @@
 
 <div class="field field--hidden" data-description="">
   <span class="label"><label for="field_45858048">Candidate stage</label><em>*</em></span>
-  <select class="state required" id="field_45858048" name="field_45858048">
+  <select class="state required" id="field_45858048" name="fields[candidate-stage]">
   	<option value="1" selected>Application received</option>
 		<option value="2">Reviewing application</option>
 		<option value="3">Unqualified</option>
@@ -80,75 +84,75 @@
 
 <div class="field" data-description="">
   <span class="label"><label for="field_45860310">First name</label><em>*</em></span>
-  <input data-notrequired="required" data-trigger="change" class="text required" id="field_45860310" name="field_45860310" type="text">
+  <input data-notrequired="required" data-trigger="change" class="text required" id="field_45860310" name="fields[first-name]" type="text">
 </div>
 
 <div class="field" data-description="">
   <span class="label"><label for="field_45860311">Last name</label><em>*</em></span>
-  <input data-notrequired="required" data-trigger="change" class="text required" id="field_45860311" name="field_45860311" type="text">
+  <input data-notrequired="required" data-trigger="change" class="text required" id="field_45860311" name="fields[last-name]" type="text">
 </div>
 
 <div class="field" data-description="">
   <span class="label"><label for="field_45860312">Email address</label><em>*</em></span>
-	<input data-notrequired="required" data-trigger="change" type="email" class="text required" id="field_45860312" name="field_45860312" type="text">
+	<input data-notrequired="required" data-trigger="change" type="email" class="text required" id="field_45860312" name="fields[email-address]" type="text">
 </div>
 
 <div class="field" data-description="">
   <span class="label"><label for="field_45860313">Phone number</label><em>*</em></span>
-  <input data-notrequired="required" data-trigger="change" class="text required" id="field_45860313" name="field_45860313" type="text">
+  <input data-notrequired="required" data-trigger="change" class="text required" id="field_45860313" name="fields[phone-number]" type="text">
 </div>
 
 <div class="field" data-description="">
   <span class="label"><label for="field_45860314">Date of birth</label><em>*</em></span>
-	<input data-notrequired="required" data-trigger="change" data-regexp="[0-9]{2}\/[0-9]{2}\/[0-9]{4}" class="dob" id="field_45860314_date" name="field_45860314[date]" placeholder="DD/MM/YYYY" type="text" value="">
-  <input class="" id="field_45860314_time" name="field_45860314[time]" placeholder="00:00" type="hidden" value="">
+	<input data-notrequired="required" data-trigger="change" data-regexp="[0-9]{4}\-[0-9]{2}\-[0-9]{2}" class="dob" id="field_45860314_date" name="fields[date-of-birth][start_date]" placeholder="YYYY-MM-DD" type="text" value="">
+  <input class="" id="field_45860314_time" name="fields[date-of-birth][start_utc]" placeholder="00:00" type="hidden" value="">
 </div>
 
 <div class="field" data-description="If you use LinkedIn include the link to your personal profile page">
   <span class="label"><label for="field_46034536">LinkedIn profile</label></span>
-  <input data-type="urlstrict" data-trigger="change" class="text" id="field_46034536" name="field_46034536" type="text">
+  <input data-type="urlstrict" data-trigger="change" class="text" id="field_46034536" name="fields[linkedin-profile2]" type="text">
 </div>
 
 <div class="field" data-description="">
   <span class="label"><label for="field_45860315">Skype username</label></span>
-  <input class="text" id="field_45860315" name="field_45860315" type="text">
+  <input class="text" id="field_45860315" name="fields[skype-username]" type="text">
 </div>
 
 <div class="field" data-description="Upload a photo of yourself">
   <span class="label"><label for="field_45859612">Photo of you</label></span>
   <span class="hint">Only jpg/png/gif/bmp file types are supported</span>
-  <input class="file imageFile" id="field_45859612_0" name="field_45859612_0" type="file">
+  <input class="file imageFile" id="field_45859612_0" name="fields[your-photo]" type="file">
 </div>
 
 <div class="field" data-description="">
   <span class="label"><label for="field_46032938">Address line 1</label><em>*</em></span>
-  <input data-notrequired="required" data-trigger="change" class="text required" id="field_46032938" name="field_46032938" type="text">
+  <input data-notrequired="required" data-trigger="change" class="text required" id="field_46032938" name="fields[address-line-1]" type="text">
 </div>
 
 <div class="field" data-description="">
   <span class="label"><label for="field_46032939">Address line 2</label></span>
-  <input class="text" id="field_46032939" name="field_46032939" type="text">
+  <input class="text" id="field_46032939" name="fields[address-line-2]" type="text">
 </div>
 
 <div class="field" data-description="">
   <span class="label"><label for="field_46040134">Town / City</label><em>*</em></span>
-  <input data-notrequired="required" data-trigger="change" class="text required" id="field_46040134" name="field_46040134" type="text">
+  <input data-notrequired="required" data-trigger="change" class="text required" id="field_46040134" name="fields[town-city]" type="text">
 </div>
 
 <div class="field" data-description="">
   <span class="label"><label for="field_46032940">County</label><em>*</em></span>
-  <input data-notrequired="required" data-trigger="change" class="text required" id="field_46032940" name="field_46032940" type="text">
+  <input data-notrequired="required" data-trigger="change" class="text required" id="field_46032940" name="fields[county]" type="text">
 </div>
 
 <div class="field" data-description="">
   <span class="label"><label for="field_46032941">Postcode</label><em>*</em></span>
-  <input data-notrequired="required" data-trigger="change" class="text required" id="field_46032941" name="field_46032941" type="text">
+  <input data-notrequired="required" data-trigger="change" class="text required" id="field_46032941" name="fields[postcode]" type="text">
 </div>
 
 <div class="field" data-description="">
   <span class="label"><label for="field_46032942">Country</label><em>*</em></span>
   <div class="hint country-selector-hint">Start typing your country...</div>
-  <select name="field_46032942" id="field_46032942" class="country-selector" autocorrect="off" autocomplete="off" data-notrequired="required" placeholder="Type your country...">
+  <select name="fields[country]" id="field_46032942" class="country-selector" autocorrect="off" autocomplete="off" data-notrequired="required" placeholder="Type your country...">
     <option value="" selected="selected"></option>
     <option value="Afghanistan" data-alternative-spellings="AF افغانستان">Afghanistan</option>
     <option value="Åland Islands" data-alternative-spellings="AX Aaland Aland" data-relevancy-booster="0.5">Åland Islands</option>
@@ -405,13 +409,13 @@
 <div class="field" data-description="Where did you study for your undergraduate degree (or equivalent), if you did?">
   <span class="label"><label for="field_45859613">Undergraduate Degree (or equivalent) University or Institution</label></span>
   <span class="hint">Where did you study for your undergraduate degree (or equivalent), if you did?</span>
-  <input class="text university" id="field_45859613" name="field_45859613" type="text" placeholder="Start typing your univerisity/institution...">
+  <input class="text university" id="field_45859613" name="fields[undergraduate-degree-or-equivalent-institution]" type="text" placeholder="Start typing your univerisity/institution...">
 </div>
 
 <div class="field" data-description="What grade did you achieve for your undergraduate degree (or equivalent)?">
   <span class="label"><label for="field_46033101">Undergraduate Degree (or equivalent) Attainment</label></span>
   <span class="hint">What grade did you achieve for your undergraduate degree (or equivalent)?</span>
-  <select class="state" id="field_46033101" name="field_46033101">
+  <select class="state" id="field_46033101" name="fields[undergraduate-degree-or-equivalent-attainment2]">
 	  <option value="">-- please choose --</option>
 		<option value="1">1st (or equivalent)</option>
 		<option value="2">2:1 (or equivalent)</option>
@@ -424,7 +428,7 @@
 <div class="field" data-description="Which category best describes the subject area of your undergraduate degree (or equivalent)?">
   <span class="label"><label for="field_46032943">Undergraduate Degree (or equivalent) Subject Area</label></span>
   <span class="hint">Which category best describes the subject area of your undergraduate degree (or equivalent)?</span>
-  <select class="state" id="field_46032943" name="field_46032943">
+  <select class="state" id="field_46032943" name="fields[undergraduate-degree-or-equivalent-subject-area]">
     <option value="">-- please choose --</option>
 		<option value="1">Art / Design</option>
 		<option value="2">Business</option>
@@ -446,32 +450,32 @@
 <div class="field" data-description="Tell us about the qualifications and education you have, highlighting where they would be advantageous for this role.">
   <span class="label"><label for="field_45859615">Other Education &amp; Qualifications</label><em>*</em></span>
   <span class="hint">Tell us about the qualifications and education you have, highlighting where they would be advantageous for this role.</span>
-  <textarea class=" required" id="field_45859615" name="field_45859615"></textarea>
+  <textarea class=" required" id="field_45859615" name="fields[other-education-qualifications]"></textarea>
 </div>
 
 <div class="field" data-description="Tell us about your current or previous roles. Include the organisation name, the title of your role, when you started/ended the position, what your role involved, what you did and how you were successful at it.">
   <span class="label"><label for="field_45859616">Previous Employment</label></span>
   <span class="hint">Tell us about your current or previous roles. Include the organisation name, the title of your role, when you started/ended the position, what your role involved, what you did and how you were successful at it.</span>
-  <textarea id="field_45859616" name="field_45859616"></textarea>
+  <textarea id="field_45859616" name="fields[employment]"></textarea>
 </div>
 
 <div class="field" data-description="Eg. languages, IT skills, particular areas of expertise, etc.">
   <span class="label"><label for="field_45859618">Other Relevant Skills</label></span>
   <span class="hint">Eg. languages, IT skills, particular areas of expertise, etc.</span>
-  <textarea id="field_45859618" name="field_45859618"></textarea>
+  <textarea id="field_45859618" name="fields[other-relevant-skills]"></textarea>
 </div>
 
 <div class="field" data-description="Tell us about any other activities or interests you have, including any particular achievements or roles you wish you highlight to us.">
   <span class="label"><label for="field_45859619">Activities &amp; Interests</label></span>
   <span class="hint">Tell us about any other activities or interests you have, including any particular achievements or roles you wish you highlight to us.</span>
-  <textarea id="field_45859619" name="field_45859619"></textarea>
+  <textarea id="field_45859619" name="fields[activities-interests]"></textarea>
 </div>
 
 <div class="field" data-description="When are you available to start this role?">
 	<span class="label"><label for="field_45860395">First available start date</label><em>*</em></span>
   <span class="hint">When are you available to start this role?</span>
-	<input data-notrequired="required" data-trigger="change" data-regexp="[0-9]{2}\/[0-9]{2}\/[0-9]{4}" class="date-input localeAwareDate new-placeholder required hasDatepicker availability" id="field_45860395_date" name="field_45860395[date]" placeholder="DD/MM/YYYY" type="text" value="">
-  <input class="time-input new-placeholder hasTimeEntry" id="field_45860395_time" name="field_45860395[time]" placeholder="00:00" type="hidden" value="">
+	<input data-notrequired="required" data-trigger="change" data-regexp="[0-9]{4}\-[0-9]{2}\-[0-9]{2}" class="date-input localeAwareDate new-placeholder required hasDatepicker availability" id="field_45860395_date" name="fields[first-available-start-date][start_date]" placeholder="YYYY-MM-DD" type="text" value="">
+  <input class="time-input new-placeholder hasTimeEntry" id="field_45860395_time" name="fields[first-available-start-date][start_utc]" placeholder="00:00" type="hidden" value="">
 </div>
 
 <div class="field" data-description="Do you have any pending job applications or offers which would affect your ability to continue in a permanent paid role with TBN">
@@ -480,12 +484,12 @@
   <ul class="question-wrapper">
     <li>
       <label class="form-validation-use-wrapper radio-label">
-        <input class="required_checkbox_group" id="field_65449971_1" name="field_65449971" type="radio" value="1"> No
+        <input class="required_checkbox_group" id="field_65449971_1" name="fields[do-you-have-any-pending-job-applicationsoffers]" type="radio" value="1"> No
       </label>
     </li>
     <li>
       <label class="form-validation-use-wrapper radio-label">
-        <input class="required_checkbox_group" id="field_65449971_2" name="field_65449971" type="radio" value="2"> Yes
+        <input class="required_checkbox_group" id="field_65449971_2" name="fields[do-you-have-any-pending-job-applicationsoffers]" type="radio" value="2"> Yes
       </label>
     </li>
   </ul>
@@ -493,28 +497,28 @@
 
 <div class="field field--sub" data-description="If you answered 'yes' to having any pending job applications or offers please provide details">
   <span class="label label--sub"><label for="field_65447549">If you answered 'yes' to having any pending job applications or offers please provide details</label></span>
-  <textarea id="field_65447549" name="field_65447549" data-trigger="change"></textarea>
+  <textarea id="field_65447549" name="fields[pending-applicationsoffers]" data-trigger="change"></textarea>
 </div>
 
 <div class="field" data-description="Tell us about your motivation for applying for this role and why you're a good fit for us">
   <span class="label"><label for="field_45858049">Covering Letter</label><em>*</em></span>
   <span class="hint">Tell us about your motivation for applying for this role and why you're a good fit for us.</span>
-  <textarea data-notrequired="required" data-trigger="change" class=" required" id="field_45858049" name="field_45858049"></textarea>
+  <textarea data-notrequired="required" data-trigger="change" class=" required" id="field_45858049" name="fields[motivation]"></textarea>
 </div>
 
 <div class="field">
   <span class="label"><label for="Attachments">Attachments (don't rely on information in attached files)</label></span>
   <span class="hint">Here you may attach your CV and any other supporting files if you wish. <br /><strong><em>Important note:</em></strong> You should include any information that you wish to form part of your application in the form above as we will base our initial decisions on this form alone. Don't leave any details that you'd want us to see on only your CV. Consider your CV and other supporting documents as secondary; this online form is your primary application.</span>
-  <input class="file" id="attachment_0" name="attachment_0" type="file">
-  <input class="file hidden" id="attachment_1" name="attachment_1" type="file">
-  <input class="file hidden" id="attachment_2" name="attachment_2" type="file">
-  <input class="file hidden" id="attachment_3" name="attachment_3" type="file">
-  <input class="file hidden" id="attachment_4" name="attachment_4" type="file">
-  <input class="file hidden" id="attachment_5" name="attachment_5" type="file">
-  <input class="file hidden" id="attachment_6" name="attachment_6" type="file">
-  <input class="file hidden" id="attachment_7" name="attachment_7" type="file">
-  <input class="file hidden" id="attachment_8" name="attachment_8" type="file">
-  <input class="file hidden" id="attachment_9" name="attachment_9" type="file">
+  <input class="file" id="attachment_0" name="attachments[]" type="file">
+  <input class="file hidden" id="attachment_1" name="attachments[]" type="file">
+  <input class="file hidden" id="attachment_2" name="attachments[]" type="file">
+  <input class="file hidden" id="attachment_3" name="attachments[]" type="file">
+  <input class="file hidden" id="attachment_4" name="attachments[]" type="file">
+  <input class="file hidden" id="attachment_5" name="attachments[]" type="file">
+  <input class="file hidden" id="attachment_6" name="attachments[]" type="file">
+  <input class="file hidden" id="attachment_7" name="attachments[]" type="file">
+  <input class="file hidden" id="attachment_8" name="attachments[]" type="file">
+  <input class="file hidden" id="attachment_9" name="attachments[]" type="file">
   <button class="add-file-field" type="button">Add another file</button>
 </div>
 
@@ -543,6 +547,11 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+
+  // Used for testing
+  // $(document).ready(function () {
+  //   $("input.date-input").val("2016-02-02");
+  // });
 
 </script>
 
