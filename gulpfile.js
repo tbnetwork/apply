@@ -85,7 +85,31 @@ gulp.task('build-css', function() {
         .pipe(notify("CSS built"));
 });
 
-gulp.task('js', function() {
+gulp.task('js', ['build-js', 'update-js-cache-buster']);
+
+gulp.task('update-js-cache-buster', ['build-js'], function (cb) {
+    var js_hash = crypto.createHash('md5').update(
+        fs.readFileSync('build/js/main.js', 'utf8')
+    ).digest("hex");
+
+    glob('index.html', function(err, files) {
+        if (err) { throw err; }
+
+        files.forEach(function(item, index, array) {
+              replace({
+                  regex: 'src=[\"\']build\/js\/main\.js.*[\"\']',
+                  replacement: 'src="build/js/main.js?ver=' + js_hash + '"',
+                  paths: [item],
+                  recursive: true,
+                  silent: true
+              });
+        });
+
+        cb(err);
+    });
+});
+
+gulp.task('build-js', function() {
     return gulp.src([
             js_src + '/jquery.min.js',
             js_src + '/moment.js',
