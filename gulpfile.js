@@ -16,7 +16,11 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     rename = require('gulp-rename'),
     clean = require('gulp-clean'),
-    spawn = require('child_process').spawn;
+    spawn = require('child_process').spawn,
+    fs = require('fs'),
+    crypto = require('crypto'),
+    glob = require('glob'),
+    replace = require('replace')
 
 gulp.task('livereload', function() {
     var server = livereload();
@@ -49,7 +53,31 @@ gulp.task('watching-task', ['livereload'], function(){
     gulp.watch(js_src + '/**/*.js', ['js']);
 });
 
-gulp.task('css', function() {
+gulp.task('css', ['build-css', 'update-css-cache-buster']);
+
+gulp.task('update-css-cache-buster', ['build-css'], function (cb) {
+    var css_hash = crypto.createHash('md5').update(
+        fs.readFileSync('build/css/styles.css', 'utf8')
+    ).digest("hex");
+
+    glob('index.html', function(err, files) {
+        if (err) { throw err; }
+
+        files.forEach(function(item, index, array) {
+              replace({
+                  regex: 'href=[\"\']build\/css\/styles\.css.*[\"\']',
+                  replacement: 'href="build/css/styles.css?ver=' + css_hash + '"',
+                  paths: [item],
+                  recursive: true,
+                  silent: true
+              });
+        });
+
+        cb(err);
+    });
+});
+
+gulp.task('build-css', function() {
     return gulp.src(css_src + '/styles.scss')
         .pipe(sass({sourcemap: true, style: 'compact'}))
         .pipe(autoprefix('last 10 version'))
