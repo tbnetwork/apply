@@ -45,17 +45,25 @@
   <span class="label"><label for="field_47343254">Where did you hear about this role?</label></span>
   <select class="state" id="field_47343254" name="fields[where-did-you-hear-about-this-role]">
     <option value="">-- please choose --</option>
-    <option value="1">TBN website</option>
-    <option value="2">TargetJobs website</option>
-    <option value="3">TargetJobs email</option>
+    <option value="11">TBN email</option>
     <option value="4">Twitter</option>
     <option value="5">LinkedIn</option>
-    <option value="6">Facebook</option>
     <option value="7">Word of mouth / introduction</option>
-    <option value="8">Devex</option>
-    <option value="9">FUSE</option>
+    <option value="12">ANDE</option>
+    <option value="13">Business Fights Poverty</option>
     <option value="10">Other</option>
+    <!-- <option value="1">TBN website</option> -->
+    <!-- <option value="2">TargetJobs website</option> -->
+    <!-- <option value="3">TargetJobs email</option> -->
+    <!-- <option value="6">Facebook</option> -->
+    <!-- <option value="8">Devex</option> -->
+    <!-- <option value="9">FUSE</option> -->
   </select>
+</div>
+
+<div class="field">
+  <label class="label" for="field_131760582">If you were referred, please provide the name and organisation of the person who referred you</label>
+  <input type="text" name="fields[if-you-were-referred-please-provide-the-name-and-organi]" id="field_131760582" value="" class="form-control" />
 </div>
 
 <hr />
@@ -115,7 +123,7 @@
 
 <div class="field" data-description="If you use LinkedIn include the link to your personal profile page">
   <span class="label"><label for="field_46034536">LinkedIn profile</label></span>
-  <input data-type="urlstrict" data-trigger="change" class="text" id="field_46034536" name="fields[linkedin-profile2]" type="text">
+  <input data-type="urlstrict" data-trigger="change" class="text" id="field_46034536" name="fields[linkedin-profile2]" type="url">
 </div>
 
 <div class="field" data-description="">
@@ -157,7 +165,7 @@
 <div class="field" data-description="">
   <span class="label"><label for="field_46032942">Country</label><em>*</em></span>
   <div class="hint country-selector-hint">Start typing your country...</div>
-  <select name="fields[country]" id="field_46032942" class="country-selector" autocorrect="off" autocomplete="off" data-parsley-validate placeholder="Type your country...">
+  <select name="fields[country]" id="field_46032942" class="country-selector  required" autocorrect="off" autocomplete="off" data-parsley-validate placeholder="Type your country...">
     <option value="" selected="selected"></option>
     <option value="Afghanistan" data-alternative-spellings="AF افغانستان">Afghanistan</option>
     <option value="Åland Islands" data-alternative-spellings="AX Aaland Aland" data-relevancy-booster="0.5">Åland Islands</option>
@@ -411,17 +419,258 @@
   </select>
 </div>
 
+<div class="field" data-description="">
+  <span class="label"><label for="field_nationality">Nationality</label><em>*</em></span>
+  <select name="fields[nationality]" id="field_nationality" data-parsley-validate class="app required">
+      <option selected value="">-- select Nationality --</option>
+
+      <optgroup>
+        <option value="Kenyan">Kenyan</option>
+        <option value="British">British</option>
+        <option value="American">American</option>
+      </optgroup>
+
+      <optgroup>
+        <option value="Afghan">Afghan</option>
+        <option value="Albanian">Albanian</option>
+        <option value="Algerian">Algerian</option>
+        <option value="American">American</option>
+        <option value="Andorran">Andorran</option>
+        <option value="Angolan">Angolan</option>
+        <option value="Antiguans">Antiguans</option>
+        <option value="Argentinean">Argentinean</option>
+        <option value="Armenian">Armenian</option>
+        <option value="Australian">Australian</option>
+        <option value="Austrian">Austrian</option>
+        <option value="Azerbaijani">Azerbaijani</option>
+        <option value="Bahamian">Bahamian</option>
+        <option value="Bahraini">Bahraini</option>
+        <option value="Bangladeshi">Bangladeshi</option>
+        <option value="Barbadian">Barbadian</option>
+        <option value="Barbudans">Barbudans</option>
+        <option value="Batswana">Batswana</option>
+        <option value="Belarusian">Belarusian</option>
+        <option value="Belgian">Belgian</option>
+        <option value="Belizean">Belizean</option>
+        <option value="Beninese">Beninese</option>
+        <option value="Bhutanese">Bhutanese</option>
+        <option value="Bolivian">Bolivian</option>
+        <option value="Bosnian">Bosnian</option>
+        <option value="Brazilian">Brazilian</option>
+        <option value="British">British</option>
+        <option value="Bruneian">Bruneian</option>
+        <option value="Bulgarian">Bulgarian</option>
+        <option value="Burkinabe">Burkinabe</option>
+        <option value="Burmese">Burmese</option>
+        <option value="Burundian">Burundian</option>
+        <option value="Cambodian">Cambodian</option>
+        <option value="Cameroonian">Cameroonian</option>
+        <option value="Canadian">Canadian</option>
+        <option value="Cape Verdean">Cape Verdean</option>
+        <option value="Central African">Central African</option>
+        <option value="Chadian">Chadian</option>
+        <option value="Chilean">Chilean</option>
+        <option value="Chinese">Chinese</option>
+        <option value="Colombian">Colombian</option>
+        <option value="Comoran">Comoran</option>
+        <option value="Congolese">Congolese</option>
+        <option value="Congolese">Congolese</option>
+        <option value="Costa Rican">Costa Rican</option>
+        <option value="Croatian">Croatian</option>
+        <option value="Cuban">Cuban</option>
+        <option value="Cypriot">Cypriot</option>
+        <option value="Czech">Czech</option>
+        <option value="Danish">Danish</option>
+        <option value="Djibouti">Djibouti</option>
+        <option value="Dominican">Dominican</option>
+        <option value="Dominican">Dominican</option>
+        <option value="Dutch">Dutch</option>
+        <option value="Dutchman">Dutchman</option>
+        <option value="Dutchwoman">Dutchwoman</option>
+        <option value="East Timorese">East Timorese</option>
+        <option value="Ecuadorean">Ecuadorean</option>
+        <option value="Egyptian">Egyptian</option>
+        <option value="Emirian">Emirian</option>
+        <option value="Equatorial Guinean">Equatorial Guinean</option>
+        <option value="Eritrean">Eritrean</option>
+        <option value="Estonian">Estonian</option>
+        <option value="Ethiopian">Ethiopian</option>
+        <option value="Fijian">Fijian</option>
+        <option value="Filipino">Filipino</option>
+        <option value="Finnish">Finnish</option>
+        <option value="French">French</option>
+        <option value="Gabonese">Gabonese</option>
+        <option value="Gambian">Gambian</option>
+        <option value="Georgian">Georgian</option>
+        <option value="German">German</option>
+        <option value="Ghanaian">Ghanaian</option>
+        <option value="Greek">Greek</option>
+        <option value="Grenadian">Grenadian</option>
+        <option value="Guatemalan">Guatemalan</option>
+        <option value="Guinea-Bissauan">Guinea-Bissauan</option>
+        <option value="Guinean">Guinean</option>
+        <option value="Guyanese">Guyanese</option>
+        <option value="Haitian">Haitian</option>
+        <option value="Herzegovinian">Herzegovinian</option>
+        <option value="Honduran">Honduran</option>
+        <option value="Hungarian">Hungarian</option>
+        <option value="I-Kiribati">I-Kiribati</option>
+        <option value="Icelander">Icelander</option>
+        <option value="Indian">Indian</option>
+        <option value="Indonesian">Indonesian</option>
+        <option value="Iranian">Iranian</option>
+        <option value="Iraqi">Iraqi</option>
+        <option value="Irish">Irish</option>
+        <option value="Irish">Irish</option>
+        <option value="Israeli">Israeli</option>
+        <option value="Italian">Italian</option>
+        <option value="Ivorian">Ivorian</option>
+        <option value="Jamaican">Jamaican</option>
+        <option value="Japanese">Japanese</option>
+        <option value="Jordanian">Jordanian</option>
+        <option value="Kazakhstani">Kazakhstani</option>
+        <option value="Kenyan">Kenyan</option>
+        <option value="Kittian and Nevisian">Kittian and Nevisian</option>
+        <option value="Kuwaiti">Kuwaiti</option>
+        <option value="Kyrgyz">Kyrgyz</option>
+        <option value="Laotian">Laotian</option>
+        <option value="Latvian">Latvian</option>
+        <option value="Lebanese">Lebanese</option>
+        <option value="Liberian">Liberian</option>
+        <option value="Libyan">Libyan</option>
+        <option value="Liechtensteiner">Liechtensteiner</option>
+        <option value="Lithuanian">Lithuanian</option>
+        <option value="Luxembourger">Luxembourger</option>
+        <option value="Macedonian">Macedonian</option>
+        <option value="Malagasy">Malagasy</option>
+        <option value="Malawian">Malawian</option>
+        <option value="Malaysian">Malaysian</option>
+        <option value="Maldivan">Maldivan</option>
+        <option value="Malian">Malian</option>
+        <option value="Maltese">Maltese</option>
+        <option value="Marshallese">Marshallese</option>
+        <option value="Mauritanian">Mauritanian</option>
+        <option value="Mauritian">Mauritian</option>
+        <option value="Mexican">Mexican</option>
+        <option value="Micronesian">Micronesian</option>
+        <option value="Moldovan">Moldovan</option>
+        <option value="Monacan">Monacan</option>
+        <option value="Mongolian">Mongolian</option>
+        <option value="Moroccan">Moroccan</option>
+        <option value="Mosotho">Mosotho</option>
+        <option value="Motswana">Motswana</option>
+        <option value="Mozambican">Mozambican</option>
+        <option value="Namibian">Namibian</option>
+        <option value="Nauruan">Nauruan</option>
+        <option value="Nepalese">Nepalese</option>
+        <option value="Netherlander">Netherlander</option>
+        <option value="New Zealander">New Zealander</option>
+        <option value="Ni-Vanuatu">Ni-Vanuatu</option>
+        <option value="Nicaraguan">Nicaraguan</option>
+        <option value="Nigerian">Nigerian</option>
+        <option value="Nigerien">Nigerien</option>
+        <option value="North Korean">North Korean</option>
+        <option value="Northern Irish">Northern Irish</option>
+        <option value="Norwegian">Norwegian</option>
+        <option value="Omani">Omani</option>
+        <option value="Pakistani">Pakistani</option>
+        <option value="Palauan">Palauan</option>
+        <option value="Panamanian">Panamanian</option>
+        <option value="Papua New Guinean">Papua New Guinean</option>
+        <option value="Paraguayan">Paraguayan</option>
+        <option value="Peruvian">Peruvian</option>
+        <option value="Polish">Polish</option>
+        <option value="Portuguese">Portuguese</option>
+        <option value="Qatari">Qatari</option>
+        <option value="Romanian">Romanian</option>
+        <option value="Russian">Russian</option>
+        <option value="Rwandan">Rwandan</option>
+        <option value="Saint Lucian">Saint Lucian</option>
+        <option value="Salvadoran">Salvadoran</option>
+        <option value="Samoan">Samoan</option>
+        <option value="San Marinese">San Marinese</option>
+        <option value="Sao Tomean">Sao Tomean</option>
+        <option value="Saudi">Saudi</option>
+        <option value="Scottish">Scottish</option>
+        <option value="Senegalese">Senegalese</option>
+        <option value="Serbian">Serbian</option>
+        <option value="Seychellois">Seychellois</option>
+        <option value="Sierra Leonean">Sierra Leonean</option>
+        <option value="Singaporean">Singaporean</option>
+        <option value="Slovakian">Slovakian</option>
+        <option value="Slovenian">Slovenian</option>
+        <option value="Solomon Islander">Solomon Islander</option>
+        <option value="Somali">Somali</option>
+        <option value="South African">South African</option>
+        <option value="South Korean">South Korean</option>
+        <option value="Spanish">Spanish</option>
+        <option value="Sri Lankan">Sri Lankan</option>
+        <option value="Sudanese">Sudanese</option>
+        <option value="Surinamer">Surinamer</option>
+        <option value="Swazi">Swazi</option>
+        <option value="Swedish">Swedish</option>
+        <option value="Swiss">Swiss</option>
+        <option value="Syrian">Syrian</option>
+        <option value="Taiwanese">Taiwanese</option>
+        <option value="Tajik">Tajik</option>
+        <option value="Tanzanian">Tanzanian</option>
+        <option value="Thai">Thai</option>
+        <option value="Togolese">Togolese</option>
+        <option value="Tongan">Tongan</option>
+        <option value="Trinidadian or Tobagonian">Trinidadian or Tobagonian</option>
+        <option value="Tunisian">Tunisian</option>
+        <option value="Turkish">Turkish</option>
+        <option value="Tuvaluan">Tuvaluan</option>
+        <option value="Ugandan">Ugandan</option>
+        <option value="Ukrainian">Ukrainian</option>
+        <option value="Uruguayan">Uruguayan</option>
+        <option value="Uzbekistani">Uzbekistani</option>
+        <option value="Venezuelan">Venezuelan</option>
+        <option value="Vietnamese">Vietnamese</option>
+        <option value="Welsh">Welsh</option>
+        <option value="Welsh">Welsh</option>
+        <option value="Yemenite">Yemenite</option>
+        <option value="Zambian">Zambian</option>
+        <option value="Zimbabwean">Zimbabwean</option>
+      </optgroup>
+  </select>
+</div>
+
+<div class="field" data-description="">
+  <label for="field_can-work-in-kenya" class="label">Are you a Kenyan citizen or have a permit to work in Kenya?</label>
+  <span class="hint">(For Kenya based jobs only)</span>
+  <select name="fields[can-work-in-kenya]" id="field_can-work-in-kenya" class="form-control"><option value=""></option>
+    <option selected value="">-- please choose --</option>
+    <option value="1">Yes</option>
+    <option value="2">No</option>
+  </select>
+</div>
+
 <hr />
 
 <div class="field" data-description="Where did you study for your undergraduate degree (or equivalent), if you did?">
-  <span class="label"><label for="field_45859613">Undergraduate Degree (or equivalent) University or Institution</label></span>
-  <span class="hint">Where did you study for your undergraduate degree (or equivalent), if you did?</span>
+  <span class="label"><label for="field_45859613">Highest degree (or equivalent) University or institution</label></span>
+  <span class="hint">Where did you study for your highest degree (or equivalent), if you did?</span>
   <input class="text university" id="field_45859613" name="fields[undergraduate-degree-or-equivalent-institution]" type="text" placeholder="Start typing your univerisity/institution...">
 </div>
 
+<div class="field" data-description="">
+  <span class="label"><label for="field_highest-degree-or-equivalent-type">Highest degree (or equivalent) type</label></span>
+  <span class="hint">What qualification did you receive?</span>
+  <select name="fields[highest-degree-or-equivalent-type]" id="field_highest-degree-or-equivalent-type" class="form-control">
+    <option selected value="">-- please choose --</option>
+    <option value="1">PhD</option>
+    <option value="2">Masters</option>
+    <option value="3">Bachelors / Undergraduate</option>
+    <option value="4">Other</option>
+  </select>
+</div>
+
+
+
 <div class="field" data-description="What grade did you achieve for your undergraduate degree (or equivalent)?">
-  <span class="label"><label for="field_46033101">Undergraduate Degree (or equivalent) Attainment</label></span>
-  <span class="hint">What grade did you achieve for your undergraduate degree (or equivalent)?</span>
+  <span class="label"><label for="field_46033101">Highest degree (or equivalent) attainment (if appropriate)</label></span>
+  <span class="hint">What grade did you achieve for your highest degree (or equivalent)?</span>
   <select class="state" id="field_46033101" name="fields[undergraduate-degree-or-equivalent-attainment2]">
 	  <option value="">-- please choose --</option>
 		<option value="1">1st (or equivalent)</option>
@@ -433,8 +682,8 @@
 </div>
 
 <div class="field" data-description="Which category best describes the subject area of your undergraduate degree (or equivalent)?">
-  <span class="label"><label for="field_46032943">Undergraduate Degree (or equivalent) Subject Area</label></span>
-  <span class="hint">Which category best describes the subject area of your undergraduate degree (or equivalent)?</span>
+  <span class="label"><label for="field_46032943">Highest degree (or equivalent) subject area</label></span>
+  <span class="hint">Which category best describes the subject area of your highest degree (or equivalent)?</span>
   <select class="state" id="field_46032943" name="fields[undergraduate-degree-or-equivalent-subject-area]">
     <option value="">-- please choose --</option>
 		<option value="1">Art / Design</option>
@@ -487,28 +736,6 @@
   <input class="time-input new-placeholder hasTimeEntry" id="field_45860395_time" name="fields[first-available-start-date][start_utc]" placeholder="00:00" type="hidden" value="">
 </div>
 
-<div class="field" data-description="Do you have any pending job applications or offers which would affect your ability to continue in a permanent paid role with TBN">
-  <span class="label"><label for="field_65449971">Do you have any pending job applications or offers which would affect your ability to continue in a permanent paid role with TBN should that be offered to you at either the 3 or 6 month stage of your internship?</label><em>*</em></span>
-  <span class="hint">This will not affect your eligabilty for the internship; we just need to know whether you will be able to continue with us in a paid position after the internship period. If you do not have any such applications or offers that we should know about please simply answer "No".</span>
-  <ul class="question-wrapper">
-    <li>
-      <label class="form-validation-use-wrapper radio-label">
-        <input class="required_checkbox_group" id="field_65449971_1" name="fields[do-you-have-any-pending-job-applicationsoffers]" type="radio" value="1"> No
-      </label>
-    </li>
-    <li>
-      <label class="form-validation-use-wrapper radio-label">
-        <input class="required_checkbox_group" id="field_65449971_2" name="fields[do-you-have-any-pending-job-applicationsoffers]" type="radio" value="2"> Yes
-      </label>
-    </li>
-  </ul>
-</div>
-
-<div class="field field--sub" data-description="If you answered 'yes' to having any pending job applications or offers please provide details">
-  <span class="label label--sub"><label for="field_65447549">If you answered 'yes' to having any pending job applications or offers please provide details</label></span>
-  <textarea id="field_65447549" name="fields[pending-applicationsoffers]" data-trigger="change"></textarea>
-</div>
-
 <div class="field" data-description="Tell us about your motivation for applying for this role and why you're a good fit for us">
   <span class="label"><label for="field_45858049">Covering Letter</label><em>*</em></span>
   <span class="hint">Tell us about your motivation for applying for this role and why you're a good fit for us.</span>
@@ -538,7 +765,7 @@
 </form>
 
 <footer>
-  <p>Having trouble with this form? Contact us on <a href="mailto:ops@tbnetwork.org">ops@tbnetwork.org</a> or <a href="tel:+448454676384">+44 8454 676 384</a> and let us know what's going wrong.</p>
+  <p>Having trouble with this form? Contact us on <a href="mailto:sheillah.nyatome@tbnetwork.org">sheillah.nyatome@tbnetwork.org</a> or <a href="tel:+448454676384">+44 8454 676 384</a> and let us know what's going wrong.</p>
 </footer>
 
 </div><!-- .page -->
