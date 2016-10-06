@@ -17,7 +17,7 @@
   <img class="logo" src="https://www.tbnetwork.org/wp-content/uploads/2013/04/tbn-logo.png" alt="">
 </header>
 
-<form accept-charset="UTF-8" action="https://podio.com/webforms/5895023/460182" enctype="multipart/form-data" id="webform-form" method="post" data-validate="parsley">
+<form accept-charset="UTF-8" action="https://podio.com/webforms/5895023/460182" enctype="multipart/form-data" id="webform-form" method="post" data-parsley-validate>
 
 <input name="utf8" type="hidden" value="✓">
 <input type="hidden" name="authenticity_token" value="7ZD5hgPA25a4GlfQ4+sHclwb7LwSx3yeyCEP1Z7270jp9VINhbJJ4kK/0C2PKYK+S9/eMekffmAxLtA2wOgb4w==" />
@@ -31,8 +31,12 @@
 <div class="field" data-description="Which job are you applying for?">
   <span class="label"><label for="field_45858046">Vacancy</label><em>*</em></span>
   <span class="hint">Carefully select the vacancy you are applying for</span>
-  <select class="app required" id="field_45858046" name="fields[vacancy]" style="width:100%;" data-notrequired="required">
-    <option value="373127102" selected>Executive Assistant/PA to dynamic successful British Entrepreneur (2016)</option>
+  <select class="app required" id="field_45858046" name="fields[vacancy]" style="width:100%;" data-parsley-validate>
+    <option value="" selected>-- select vacancy --</option>
+    <option value="492321199">TBN Kenya office director</option>
+    <option value="492321199">TBN Kenya office director</option>
+
+    <!-- <option value="373127102" selected>Executive Assistant/PA to dynamic successful British Entrepreneur (2016)</option> -->
     <!-- <option value="232417069" selected>Kenya International development &amp;  business internship (2015)</option> -->
     <!-- <option value="165774682" selected>International development &amp;  business internship (Summer 2014)</option> -->
   </select>
@@ -84,27 +88,27 @@
 
 <div class="field" data-description="">
   <span class="label"><label for="field_45860310">First name</label><em>*</em></span>
-  <input data-notrequired="required" data-trigger="change" class="text required" id="field_45860310" name="fields[first-name]" type="text">
+  <input data-parsley-validate data-trigger="change" class="text required" id="field_45860310" name="fields[first-name]" type="text">
 </div>
 
 <div class="field" data-description="">
   <span class="label"><label for="field_45860311">Last name</label><em>*</em></span>
-  <input data-notrequired="required" data-trigger="change" class="text required" id="field_45860311" name="fields[last-name]" type="text">
+  <input data-parsley-validate data-trigger="change" class="text required" id="field_45860311" name="fields[last-name]" type="text">
 </div>
 
 <div class="field" data-description="">
   <span class="label"><label for="field_45860312">Email address</label><em>*</em></span>
-	<input data-notrequired="required" data-trigger="change" type="email" class="text required" id="field_45860312" name="fields[email-address]" type="text">
+	<input data-parsley-validate data-trigger="change" type="email" class="text required" id="field_45860312" name="fields[email-address]" type="text">
 </div>
 
 <div class="field" data-description="">
   <span class="label"><label for="field_45860313">Phone number</label><em>*</em></span>
-  <input data-notrequired="required" data-trigger="change" class="text required" id="field_45860313" name="fields[phone-number]" type="text">
+  <input data-parsley-validate data-trigger="change" class="text required" id="field_45860313" name="fields[phone-number]" type="text">
 </div>
 
 <div class="field" data-description="">
   <span class="label"><label for="field_45860314">Date of birth</label><em>*</em></span>
-	<input data-notrequired="required" data-trigger="change" data-regexp="[0-9]{4}\-[0-9]{2}\-[0-9]{2}" class="dob" id="field_45860314_date" name="fields[date-of-birth][start_date]" placeholder="YYYY-MM-DD" type="text" value="">
+	<input required data-parsley-validate data-trigger="change" data-parsley-pattern="[0-9]{4}\-[0-9]{2}\-[0-9]{2}" class="dob" id="field_45860314_date" name="fields[date-of-birth][start_date]" placeholder="YYYY-MM-DD" type="text" value="">
   <input class="" id="field_45860314_time" name="fields[date-of-birth][start_utc]" placeholder="00:00" type="hidden" value="">
 </div>
 
@@ -126,7 +130,7 @@
 
 <div class="field" data-description="">
   <span class="label"><label for="field_46032938">Address line 1</label><em>*</em></span>
-  <input data-notrequired="required" data-trigger="change" class="text required" id="field_46032938" name="fields[address-line-1]" type="text">
+  <input data-parsley-validate data-trigger="change" class="text required" id="field_46032938" name="fields[address-line-1]" type="text">
 </div>
 
 <div class="field" data-description="">
@@ -136,23 +140,23 @@
 
 <div class="field" data-description="">
   <span class="label"><label for="field_46040134">Town / City</label><em>*</em></span>
-  <input data-notrequired="required" data-trigger="change" class="text required" id="field_46040134" name="fields[town-city]" type="text">
+  <input data-parsley-validate data-trigger="change" class="text required" id="field_46040134" name="fields[town-city]" type="text">
 </div>
 
 <div class="field" data-description="">
   <span class="label"><label for="field_46032940">County</label><em>*</em></span>
-  <input data-notrequired="required" data-trigger="change" class="text required" id="field_46032940" name="fields[county]" type="text">
+  <input data-parsley-validate data-trigger="change" class="text required" id="field_46032940" name="fields[county]" type="text">
 </div>
 
 <div class="field" data-description="">
   <span class="label"><label for="field_46032941">Postcode</label><em>*</em></span>
-  <input data-notrequired="required" data-trigger="change" class="text required" id="field_46032941" name="fields[postcode]" type="text">
+  <input data-parsley-validate data-trigger="change" class="text required" id="field_46032941" name="fields[postcode]" type="text">
 </div>
 
 <div class="field" data-description="">
   <span class="label"><label for="field_46032942">Country</label><em>*</em></span>
   <div class="hint country-selector-hint">Start typing your country...</div>
-  <select name="fields[country]" id="field_46032942" class="country-selector" autocorrect="off" autocomplete="off" data-notrequired="required" placeholder="Type your country...">
+  <select name="fields[country]" id="field_46032942" class="country-selector" autocorrect="off" autocomplete="off" data-parsley-validate placeholder="Type your country...">
     <option value="" selected="selected"></option>
     <option value="Afghanistan" data-alternative-spellings="AF افغانستان">Afghanistan</option>
     <option value="Åland Islands" data-alternative-spellings="AX Aaland Aland" data-relevancy-booster="0.5">Åland Islands</option>
@@ -474,7 +478,7 @@
 <div class="field" data-description="When are you available to start this role?">
 	<span class="label"><label for="field_45860395">First available start date</label><em>*</em></span>
   <span class="hint">When are you available to start this role?</span>
-	<input data-notrequired="required" data-trigger="change" data-regexp="[0-9]{4}\-[0-9]{2}\-[0-9]{2}" class="date-input localeAwareDate new-placeholder required hasDatepicker availability" id="field_45860395_date" name="fields[first-available-start-date][start_date]" placeholder="YYYY-MM-DD" type="text" value="">
+	<input data-parsley-validate data-trigger="change" data-parsley-pattern="[0-9]{4}\-[0-9]{2}\-[0-9]{2}" class="date-input localeAwareDate new-placeholder required hasDatepicker availability" id="field_45860395_date" name="fields[first-available-start-date][start_date]" placeholder="YYYY-MM-DD" type="text" value="">
   <input class="time-input new-placeholder hasTimeEntry" id="field_45860395_time" name="fields[first-available-start-date][start_utc]" placeholder="00:00" type="hidden" value="">
 </div>
 
@@ -503,7 +507,7 @@
 <div class="field" data-description="Tell us about your motivation for applying for this role and why you're a good fit for us">
   <span class="label"><label for="field_45858049">Covering Letter</label><em>*</em></span>
   <span class="hint">Tell us about your motivation for applying for this role and why you're a good fit for us.</span>
-  <textarea data-notrequired="required" data-trigger="change" class=" required" id="field_45858049" name="fields[motivation]"></textarea>
+  <textarea data-parsley-validate data-trigger="change" class=" required" id="field_45858049" name="fields[motivation]"></textarea>
 </div>
 
 <div class="field">

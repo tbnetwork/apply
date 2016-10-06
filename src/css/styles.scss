@@ -180,7 +180,8 @@ footer {
     color: grey;
 }
 
-/*ul*/.parsley-error-list {
+/*ul*/.parsley-error-list,
+/*ul*/.parsley-errors-list {
     margin: 0;
     padding: 0.25em 1em 0.25em 2em;
     color: red;
@@ -188,7 +189,8 @@ footer {
 }
 
 input.parsley-error,
-textarea.parsley-error {
+textarea.parsley-error,
+select.parsley-error {
     background: #F2DEDE;
     border: 1px solid red;
 }

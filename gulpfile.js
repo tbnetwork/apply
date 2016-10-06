@@ -25,7 +25,6 @@ gulp.task('livereload', function() {
             'build/**',
             'index.html'
         ]).on('change', function(file) {
-            console.log( file );
             server.changed(file.path);
         });
 });
