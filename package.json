@@ -3,6 +3,9 @@
     "type": "git",
     "url": "https://hbrown@bitbucket.org/hbrown/ubs-solomon.git"
   },
+  "scripts": {
+    "gulp": "gulp --gulpfile ./gulpfile.js"
+  },
   "devDependencies": {
     "gulp": "^3.7.0",
     "gulp-autoprefixer": "0.0.7",
